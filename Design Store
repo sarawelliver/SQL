@@ -1,0 +1,25 @@
+/** Store:
+pink shirt (5)
+blue shirt (5)
+green shirt (5)
+black shirt (5)
+white shirt (5)
+red shirt (5)
+baby shirt (5)
+big shirt (5)
+**/
+
+CREATE TABLE Store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, amount_left INTEGER);
+
+INSERT INTO Store VALUES (1, "pink shirt", 5, 10.00, 5);
+INSERT INTO Store VALUES (2, "blue shirt", 5, 10.00, 4);
+INSERT INTO Store VALUES (3, "green shirt", 5, 10.00, 4);
+INSERT INTO Store VALUES (4, "black shirt", 5, 10.00, 2);
+INSERT INTO Store VALUES (5, "white shirt", 5, 10.00, 2);
+INSERT INTO Store VALUES (6, "red shirt", 5, 10.00, 5);
+INSERT INTO Store VALUES (7, "baby shirt", 5, 15.00, 1);
+INSERT INTO Store VALUES (8, "big shirt", 5, 20.00, 3);
+
+SELECT * FROM Store WHERE amount_left <5 ORDER BY amount_left;
+
+SELECT *, MAX(amount_left) FROM Store;
